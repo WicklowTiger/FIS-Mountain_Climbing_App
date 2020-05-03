@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="14.0.1" class="java.beans.XMLDecoder">
+ <object class="com.grinningwalrus.login.User">
+  <void property="name">
+   <string>gelu</string>
+  </void>
+  <void property="password">
+   <string>234</string>
+  </void>
+  <void property="rank">
+   <string>hiker</string>
+  </void>
+ </object>
+ <object class="com.grinningwalrus.login.User">
+  <void property="name">
+   <string>menumorut</string>
+  </void>
+  <void property="password">
+   <string>234</string>
+  </void>
+  <void property="rank">
+   <string>triporganizer</string>
+  </void>
+ </object>
+ <object class="com.grinningwalrus.login.User">
+  <void property="name">
+   <string>ghuie</string>
+  </void>
+  <void property="password">
+   <string>234</string>
+  </void>
+  <void property="rank">
+   <string>hiker</string>
+  </void>
+ </object>
+ <object class="com.grinningwalrus.login.User">
+  <void property="name">
+   <string>blablabla</string>
+  </void>
+  <void property="password">
+   <string>234</string>
+  </void>
+  <void property="rank">
+   <string>hiker</string>
+  </void>
+ </object>
+ <object class="com.grinningwalrus.login.User">
+  <void property="name">
+   <string>admin</string>
+  </void>
+  <void property="password">
+   <string>marmota</string>
+  </void>
+  <void property="rank">
+   <string>admin</string>
+  </void>
+ </object>
+</java>
