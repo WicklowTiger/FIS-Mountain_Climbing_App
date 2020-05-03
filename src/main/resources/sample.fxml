@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.grinningwalrus.jfx.JFX_APP">
    <left>
       <AnchorPane prefHeight="500.0" prefWidth="331.0" style="-fx-background-color: #855713;" BorderPane.alignment="CENTER">
          <children>
@@ -40,14 +40,14 @@
    <center>
       <AnchorPane prefHeight="500.0" prefWidth="394.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
          <children>
-            <PasswordField layoutX="128.0" layoutY="273.0" prefHeight="26.0" prefWidth="170.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #855713;" />
-            <TextField layoutX="128.0" layoutY="208.0" prefHeight="26.0" prefWidth="170.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: #855713; -fx-border-width: 0px 0px 2px 0px;" />
-            <Button layoutX="39.0" layoutY="356.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #855713;" text="Register" textFill="WHITE">
+            <PasswordField id="pass_field" fx:id="pass_field" layoutX="128.0" layoutY="273.0" prefHeight="26.0" prefWidth="170.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #855713;" />
+            <TextField id="user_field" fx:id="user_field" layoutX="128.0" layoutY="208.0" prefHeight="26.0" prefWidth="170.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: #855713; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button id="register_button" fx:id="register_button" onAction="#register" layoutX="39.0" layoutY="356.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #855713;" text="Register" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <Button layoutX="226.0" layoutY="356.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #855713;" text="Login" textFill="WHITE">
+            <Button id="login_button" fx:id="login_button" onAction="#login" layoutX="226.0" layoutY="356.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #855713;" text="Login" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
