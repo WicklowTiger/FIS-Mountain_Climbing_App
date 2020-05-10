@@ -68,7 +68,7 @@ public class LoginController implements java.io.Serializable{
 
     }
 
-    public boolean login(String username, String pass)
+    public String login(String username, String pass)
     {
         for(User u:users)
         {
@@ -77,16 +77,16 @@ public class LoginController implements java.io.Serializable{
                 if(Encryption.decrypt_password(u.getPassword()).equals(pass)) {
                     System.out.println("Successfully logged in");
                     BasicUserController.initialize(u.getRank(), u.getName());
-                    return true;
+                    return u.getRank();
                 }
                 else {
                     System.out.println("Invalid password");
-                    return false;
+                    return "error";
                 }
             }
         }
         System.out.println("Username does not exist");
-        return false;
+        return "error";
     }
 
     public void register(String username, String pass)
