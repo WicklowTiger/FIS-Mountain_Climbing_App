@@ -59,7 +59,7 @@
             <Font name="Bodoni MT Condensed Bold Italic" size="25.0" />
          </font>
       </Button>
-      <Button layoutX="472.0" layoutY="266.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="200.0" style="-fx-background-color: white;" text="Sign up for trips" textAlignment="CENTER" AnchorPane.rightAnchor="28.0">
+      <Button layoutX="472.0" layoutY="266.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="200.0" style="-fx-background-color: white;" text="Admin Panel" textAlignment="CENTER" AnchorPane.rightAnchor="28.0">
          <padding>
             <Insets top="60.0" />
          </padding>
@@ -85,11 +85,6 @@
             <Image url="@images/gallery.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="56.0" fitWidth="61.0" layoutX="541.0" layoutY="281.0">
-         <image>
-            <Image url="@images/signup.jpg" />
-         </image>
-      </ImageView>
       <ImageView fitHeight="69.0" fitWidth="71.0" layoutX="94.0" layoutY="434.0">
          <image>
             <Image url="@images/guide.png" />
@@ -106,6 +101,16 @@
          </image>
       </ImageView>
       <Text layoutX="337.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <ImageView fitHeight="79.0" fitWidth="81.0" layoutX="531.0" layoutY="270.0">
+         <image>
+            <Image url="@images/admin.png" />
+         </image>
+      </ImageView>
+      <Text fill="#afa9a9" layoutX="269.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="M  E  N  U">
+         <font>
+            <Font name="Britannic Bold" size="37.0" />
+         </font>
+      </Text>
    </children>
    <padding>
       <Insets bottom="45.0" />
