@@ -74,7 +74,7 @@ public class LoginController implements java.io.Serializable{
         {
             if(u.getName().equalsIgnoreCase(username))
             {
-                if(u.getPassword().equals(pass)) {
+                if(Encryption.decrypt_password(u.getPassword()).equals(pass)) {
                     System.out.println("Successfully logged in");
                     BasicUserController.initialize(u.getRank(), u.getName());
                     return true;
@@ -98,7 +98,7 @@ public class LoginController implements java.io.Serializable{
                 return;
             }
         }
-        users.add(new User(username, pass, "hiker"));
+        users.add(new User(username, Encryption.encrypt_password(pass), "hiker"));
         updateXML();
     }
 }

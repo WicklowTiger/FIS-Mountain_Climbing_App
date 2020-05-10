@@ -2,6 +2,7 @@ package com.grinningwalrus.jfx;
 
 import com.fasterxml.jackson.databind.introspect.TypeResolutionContext;
 import com.grinningwalrus.controller.BasicUserController;
+import com.grinningwalrus.login.Encryption;
 import com.grinningwalrus.login.LoginController;
 import com.grinningwalrus.login.User;
 import javafx.application.Application;
