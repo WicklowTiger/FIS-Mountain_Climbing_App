@@ -26,7 +26,7 @@ public class JFX_APP extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("ViewTrips.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("sample.fxml")));
         primaryStage.setTitle("Mountain Climbing Project");
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
