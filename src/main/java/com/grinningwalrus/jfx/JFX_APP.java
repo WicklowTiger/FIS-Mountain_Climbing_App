@@ -3,6 +3,10 @@ package com.grinningwalrus.jfx;
 import com.grinningwalrus.controller.BasicUserController;
 import com.grinningwalrus.login.LoginController;
 import javafx.application.Application;
+import javafx.beans.InvalidationListener;
+import javafx.beans.Observable;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -23,7 +27,14 @@ public class JFX_APP extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("LoginScreen.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("ViewTrips.fxml")));
+        trip_list.addListener(new InvalidationListener() {
+            @Override
+            public void invalidated(Observable observable) {
+                System.out.println("List invalidated");
+            }
+        });
+        trip_list.add(String.valueOf(76));
         primaryStage.setTitle("Mountain Climbing Project");
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
@@ -35,6 +46,9 @@ public class JFX_APP extends Application {
     @FXML private Button login_button;
     @FXML private Button register_button;
     @FXML private Button admin_button;
+
+    /**Trip list**/
+    private ObservableList<String> trip_list = FXCollections.observableArrayList();
 
     @FXML
     void register(ActionEvent event)
