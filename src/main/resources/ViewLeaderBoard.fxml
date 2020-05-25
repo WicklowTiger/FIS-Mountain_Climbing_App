@@ -7,19 +7,19 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="560.0" prefWidth="357.0" style="-fx-background-color: #7c6e0a#7c6e0a;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ViewLeadearBoard">
+<AnchorPane prefHeight="560.0" prefWidth="357.0" style="-fx-background-color: #7c6e0a#7c6e0a;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.grinningwalrus.jfx.JFX_APP">
    <children>
+      <ImageView fitHeight="121.0" fitWidth="152.0" layoutX="151.0" layoutY="84.0">
+         <image>
+            <Image url="@images/pngflow.com.png" />
+         </image>
+      </ImageView>
       <StackPane layoutY="207.0" prefHeight="405.0" prefWidth="443.0" />
       <Text layoutX="106.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leaderboard">
          <font>
             <Font name="System Bold Italic" size="43.0" />
          </font>
       </Text>
-      <ImageView fitHeight="121.0" fitWidth="152.0" layoutX="151.0" layoutY="84.0">
-         <image>
-            <Image url="@../../../../pngflow.com.png" />
-         </image>
-      </ImageView>
    </children>
 </AnchorPane>
 

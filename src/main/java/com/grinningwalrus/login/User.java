@@ -23,7 +23,7 @@ public class User implements Comparable{
     public int compareTo(Object o) {
         int comparescore=((User)o).getScore();
         /* For Ascending order*/
-        return this.score - comparescore;
+        return comparescore - this.score;
     }
 
     public Integer getScore() {
@@ -62,7 +62,7 @@ public class User implements Comparable{
     @Override
     public String toString()
     {
-        return "Username:" + this.getName() + "Rank:" + this.getRank() + "Score:" + this.getScore();
+        return "Name: " + this.getName() + "       Rank: " + this.getRank() + "      Score: " + this.getScore();
     }
 
 }
