@@ -1,10 +1,11 @@
 package com.grinningwalrus.login;
 
-public class User {
+public class User implements Comparable{
 
     private String name;
     private String password;
     private String rank;
+    private Integer score;
 
     public User()
     {
@@ -15,7 +16,24 @@ public class User {
         this.name = name;
         this.password = password;
         this.rank = rank;
+        this.score = 0;
     }
+
+    @Override
+    public int compareTo(Object o) {
+        int comparescore=((User)o).getScore();
+        /* For Ascending order*/
+        return this.score - comparescore;
+    }
+
+    public Integer getScore() {
+        return score;
+    }
+
+    public void setScore(Integer score) {
+        this.score = score;
+    }
+
 
     public String getName() {
         return name;
@@ -44,7 +62,7 @@ public class User {
     @Override
     public String toString()
     {
-        return "Username:" + this.getName() + "\nPassword:" + this.getPassword() + "\nRank:" + this.getRank() + "\n";
+        return "Username:" + this.getName() + "Rank:" + this.getRank() + "Score:" + this.getScore();
     }
 
 }
