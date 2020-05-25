@@ -101,4 +101,9 @@ public class LoginController implements java.io.Serializable{
         users.add(new User(username, Encryption.encrypt_password(pass), "hiker"));
         updateXML();
     }
+
+    public ArrayList<User> getUsers()
+    {
+        return users;
+    }
 }

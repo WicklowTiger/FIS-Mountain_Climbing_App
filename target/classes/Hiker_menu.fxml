@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.grinningwalrus.jfx.JFX_APP">
 
 
    <children>
@@ -67,7 +67,7 @@
             <Font name="Bodoni MT Condensed Bold Italic" size="25.0" />
          </font>
       </Button>
-      <Button layoutX="471.0" layoutY="427.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="200.0" style="-fx-background-color: white;" text="View Trips" textAlignment="CENTER" AnchorPane.leftAnchor="471.0" AnchorPane.rightAnchor="29.0">
+      <Button layoutX="471.0" layoutY="427.0" onAction="#switch_trips" mnemonicParsing="false" prefHeight="120.0" prefWidth="200.0" style="-fx-background-color: white;" text="View Trips" textAlignment="CENTER" AnchorPane.leftAnchor="471.0" AnchorPane.rightAnchor="29.0">
          <padding>
             <Insets top="60.0" />
          </padding>
