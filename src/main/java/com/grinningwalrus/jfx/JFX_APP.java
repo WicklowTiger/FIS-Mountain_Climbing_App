@@ -21,6 +21,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import sun.plugin.javascript.navig.Anchor;
 
 import java.util.*;
 
@@ -56,7 +57,7 @@ public class JFX_APP extends Application {
     @FXML private Button login_button;
     @FXML private Button register_button;
     @FXML private Button admin_button;
-    @FXML private static ImageView gallery_image;
+    @FXML private ImageView gallery_image;
 
     private static final ObservableList<Trip> trip_obs_list =
             FXCollections.observableArrayList();
@@ -118,7 +119,7 @@ public class JFX_APP extends Application {
     void switch_leaderboard(ActionEvent event)
     {
         try{
-            switch_scene(event, "ViewLeaderboard.fxml");
+            switch_scene(event, "ViewLeaderBoard.fxml");
         }
         catch(Exception e)
         {

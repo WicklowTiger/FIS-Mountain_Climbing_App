@@ -8,7 +8,7 @@
    <string>ncsopvb</string>
   </void>
   <void property="rank">
-   <string>hiker</string>
+   <string>admin</string>
   </void>
   <void property="score">
    <int>2</int>
