@@ -89,7 +89,7 @@ public class JFX_APP extends Application {
     void register(ActionEvent event)
     {
         if(controller.register(user_field.getText(), pass_field.getText()).equalsIgnoreCase("exists"))
-            BasicUserController.message_box("Username already exists");
+            BasicUserController.message_box("Username already exists", Alert.AlertType.ERROR);
     }
 
     @FXML
@@ -145,7 +145,7 @@ public class JFX_APP extends Application {
         if(trip_index != -1)
         {
             if (TripXMLController.getTrips().get(trip_index).getSigned_up_users().contains(BasicUserController.getUser().getUsername())) {
-                BasicUserController.message_box("You are already signed up for that trip!");
+                BasicUserController.message_box("You are already signed up for that trip!", Alert.AlertType.WARNING);
             } else {
                 TripXMLController.getTrips().get(trip_index).getSigned_up_users().add(BasicUserController.getUser().getUsername());
                 trip_string_obs_list.set(trip_index, TripXMLController.getTrips().get(trip_index).toString() + " Signed up for this");
@@ -162,7 +162,7 @@ public class JFX_APP extends Application {
         if(trip_index != -1)
         {
             if (!TripXMLController.getTrips().get(trip_index).getSigned_up_users().contains(BasicUserController.getUser().getUsername())) {
-                BasicUserController.message_box("You are not signed up for that trip!");
+                BasicUserController.message_box("You are not signed up for that trip!", Alert.AlertType.WARNING);
             } else {
                 TripXMLController.getTrips().get(trip_index).getSigned_up_users().remove(BasicUserController.getUser().getUsername());
                 trip_string_obs_list.set(trip_index, TripXMLController.getTrips().get(trip_index).toString());
@@ -245,7 +245,7 @@ public class JFX_APP extends Application {
                             break;
                         }
                     }
-                    BasicUserController.message_box("You have approved " + username + "'s record.");
+                    BasicUserController.message_box("You have approved " + username + "'s record.", Alert.AlertType.INFORMATION);
                     RecordXMLController.getRecords().remove(record_index);
                     record_string_obs_list.remove(record_index);
                     RecordXMLController.updateXML();
@@ -264,7 +264,7 @@ public class JFX_APP extends Application {
         if(record_index != -1)
         {
             String username = RecordXMLController.getRecords().get(record_index).getName();
-            BasicUserController.message_box("You have declined " + username + "'s record.");
+            BasicUserController.message_box("You have declined " + username + "'s record.", Alert.AlertType.INFORMATION);
             RecordXMLController.getRecords().remove(record_index);
             RecordXMLController.updateXML();
             record_string_obs_list.remove(record_index);
@@ -274,13 +274,13 @@ public class JFX_APP extends Application {
     @FXML
     void submit_record(ActionEvent event)
     {
-        String location = ((TextField) scene.getRoot().getChildrenUnmodifiable().get(0)).getText();
-        String altitude = ((TextField) scene.getRoot().getChildrenUnmodifiable().get(1)).getText();
+        String location = ((TextField) scene.getRoot().getChildrenUnmodifiable().get(1)).getText();
+        String altitude = ((TextField) scene.getRoot().getChildrenUnmodifiable().get(2)).getText();
         for(Record r:RecordXMLController.getRecords())
         {
             if(r.getName().equalsIgnoreCase(BasicUserController.getUser().getUsername()) && r.getAltitude().equalsIgnoreCase(altitude))
             {
-                BasicUserController.message_box("You have already submitted that record!");
+                BasicUserController.message_box("You have already submitted that record!", Alert.AlertType.WARNING);
                 return;
             }
         }
@@ -308,7 +308,7 @@ public class JFX_APP extends Application {
         for(Trip t:TripXMLController.getTrips())
         {
             if (t.getName().equalsIgnoreCase(trip_name)) {
-                BasicUserController.message_box("That trip already exists");
+                BasicUserController.message_box("That trip already exists", Alert.AlertType.ERROR);
                 return;
             }
         }
@@ -317,7 +317,7 @@ public class JFX_APP extends Application {
         trip_obs_list.add(new_trip);
         trip_string_obs_list.add(new_trip.toString());
         TripXMLController.updateXML();
-        BasicUserController.message_box("You have added a new trip!");
+        BasicUserController.message_box("You have added a new trip!", Alert.AlertType.INFORMATION);
     }
 
     @FXML
@@ -338,11 +338,11 @@ public class JFX_APP extends Application {
                 {
                     trip_string_obs_list.add(s.toString());
                 }
-                BasicUserController.message_box("You have changed a trip!");
+                BasicUserController.message_box("You have changed a trip!", Alert.AlertType.INFORMATION);
                 return;
             }
         }
-        BasicUserController.message_box("That trip name does not exist!");
+        BasicUserController.message_box("That trip name does not exist!", Alert.AlertType.ERROR);
     }
 
     @FXML
@@ -355,11 +355,11 @@ public class JFX_APP extends Application {
                 TripXMLController.getTrips().remove(t);
                 TripXMLController.updateXML();
                 trip_string_obs_list.remove(t.toString());
-                BasicUserController.message_box("You have deleted a trip!");
+                BasicUserController.message_box("You have deleted a trip!", Alert.AlertType.WARNING);
                 return;
             }
         }
-        BasicUserController.message_box("That trip name does not exist!");
+        BasicUserController.message_box("That trip name does not exist!", Alert.AlertType.ERROR);
     }
 
     @FXML
@@ -386,24 +386,24 @@ public class JFX_APP extends Application {
                     case "Amateur":
                     {
                         u.setHiker_rank("Advanced");
-                        BasicUserController.message_box("You have promoted " + username + " to Advanced Hiker rank.");
+                        BasicUserController.message_box("You have promoted " + username + " to Advanced Hiker rank.", Alert.AlertType.INFORMATION);
                         break;
                     }
                     case "Advanced":
                     {
                         u.setHiker_rank("Experienced");
-                        BasicUserController.message_box("You have promoted " + username + " to Experienced Hiker rank.");
+                        BasicUserController.message_box("You have promoted " + username + " to Experienced Hiker rank.", Alert.AlertType.INFORMATION);
                         break;
                     }
                     case "Experienced":
                     {
                         u.setHiker_rank("Mountain Man");
-                        BasicUserController.message_box("You have promoted " + username + " to Mountain Man Hiker rank.");
+                        BasicUserController.message_box("You have promoted " + username + " to Mountain Man Hiker rank.", Alert.AlertType.INFORMATION);
                         break;
                     }
                     case "Mountain Man":
                     {
-                        BasicUserController.message_box("You cannot promote " + username + " to a higher rank.");
+                        BasicUserController.message_box("You cannot promote " + username + " to a higher rank.", Alert.AlertType.INFORMATION);
                         break;
                     }
                 }
@@ -425,25 +425,25 @@ public class JFX_APP extends Application {
                 {
                     case "Amateur":
                     {
-                        BasicUserController.message_box("You cannot demote " + username + " to a lower rank.");
+                        BasicUserController.message_box("You cannot demote " + username + " to a lower rank.", Alert.AlertType.INFORMATION);
                         break;
                     }
                     case "Advanced":
                     {
                         u.setHiker_rank("Amateur");
-                        BasicUserController.message_box("You have demoted " + username + " to Amateur Hiker rank.");
+                        BasicUserController.message_box("You have demoted " + username + " to Amateur Hiker rank.", Alert.AlertType.INFORMATION);
                         break;
                     }
                     case "Experienced":
                     {
                         u.setHiker_rank("Advanced");
-                        BasicUserController.message_box("You have demoted " + username + " to Advanced Hiker rank.");
+                        BasicUserController.message_box("You have demoted " + username + " to Advanced Hiker rank.", Alert.AlertType.INFORMATION);
                         break;
                     }
                     case "Mountain Man":
                     {
                         u.setHiker_rank("Experienced");
-                        BasicUserController.message_box("You have demoted " + username + " to Experienced Hiker rank.");
+                        BasicUserController.message_box("You have demoted " + username + " to Experienced Hiker rank.", Alert.AlertType.INFORMATION);
                         break;
                     }
                 }
@@ -549,7 +549,7 @@ public class JFX_APP extends Application {
             {
                 if(!u.getHiker_rank().equalsIgnoreCase("mountain man") && !u.getHiker_rank().equalsIgnoreCase("experienced"))
                 {
-                    BasicUserController.message_box("You have to be a higher rank in order to do that!");
+                    BasicUserController.message_box("You have to be a higher rank in order to do that!", Alert.AlertType.ERROR);
                     return;
                 }
             }
@@ -561,7 +561,7 @@ public class JFX_APP extends Application {
         }
         catch(Exception e)
         {
-            BasicUserController.message_box("That photo does not exist" + image_text);
+            BasicUserController.message_box("That photo does not exist" + image_text, Alert.AlertType.ERROR);
             return;
         }
         int i = 1;
@@ -585,10 +585,10 @@ public class JFX_APP extends Application {
         catch(IOException e)
         {
             e.printStackTrace();
-            BasicUserController.message_box("Something went wrong!");
+            BasicUserController.message_box("Something went wrong!", Alert.AlertType.ERROR);
             return;
         }
-        BasicUserController.message_box("Photo added.");
+        BasicUserController.message_box("Photo added.", Alert.AlertType.INFORMATION);
     }
 
     @FXML
@@ -600,7 +600,7 @@ public class JFX_APP extends Application {
             {
                 if(!u.getHiker_rank().equalsIgnoreCase("mountain man"))
                 {
-                    BasicUserController.message_box("You have to be a higher rank in order to do that!");
+                    BasicUserController.message_box("You have to be a higher rank in order to do that!", Alert.AlertType.ERROR);
                     return;
                 }
             }
@@ -612,7 +612,7 @@ public class JFX_APP extends Application {
         }
         catch(Exception e)
         {
-            BasicUserController.message_box("That guide does not exist" + image_text);
+            BasicUserController.message_box("That guide does not exist" + image_text, Alert.AlertType.ERROR);
             return;
         }
         int i = 1;
@@ -636,10 +636,10 @@ public class JFX_APP extends Application {
         catch(IOException e)
         {
             e.printStackTrace();
-            BasicUserController.message_box("Something went wrong!");
+            BasicUserController.message_box("Something went wrong!", Alert.AlertType.ERROR);
             return;
         }
-        BasicUserController.message_box("Guide added.");
+        BasicUserController.message_box("Guide added.", Alert.AlertType.INFORMATION);
     }
 
     @FXML

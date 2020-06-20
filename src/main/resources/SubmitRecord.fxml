@@ -2,30 +2,34 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.image.Image?>
 <AnchorPane prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.grinningwalrus.jfx.JFX_APP">
    <children>
-      <TextField layoutX="91.0" layoutY="141.0" />
-      <TextField layoutX="91.0" layoutY="222.0" />
-      <Button layoutX="265.0" layoutY="399.0" onAction="#submit_record" mnemonicParsing="false" prefHeight="67.0" prefWidth="171.0" text="Submit">
+      <ImageView fitHeight="600.0" fitWidth="700.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/submitrecord.png" />
+         </image>
+      </ImageView>
+      <TextField layoutX="445.0" layoutY="116.0" />
+      <TextField layoutX="445.0" layoutY="193.0" />
+      <Button layoutX="445.0" layoutY="256.0" mnemonicParsing="false" onAction="#submit_record" prefHeight="67.0" prefWidth="171.0" text="Submit">
          <font>
             <Font size="26.0" />
          </font>
       </Button>
-      <Text layoutX="91.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location" wrappingWidth="106.13671875">
+      <Text layoutX="445.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location" wrappingWidth="106.13671875">
          <font>
-            <Font size="17.0" />
+            <Font size="20.0" />
          </font>
       </Text>
-      <Text layoutX="91.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Altitude reached" wrappingWidth="132.13671875">
+      <Text layoutX="445.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Altitude reached" wrappingWidth="148.99998903274536">
          <font>
-            <Font size="17.0" />
+            <Font size="20.0" />
          </font>
       </Text>
       <ImageView fitHeight="56.0" fitWidth="96.0" layoutX="37.0" layoutY="522.0" pickOnBounds="true" preserveRatio="true">

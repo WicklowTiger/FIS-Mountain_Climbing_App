@@ -9,11 +9,11 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.grinningwalrus.jfx.JFX_APP">
    <children>
-      <Text layoutX="91.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" wrappingWidth="106.13671875">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Text>
+      <ImageView fitHeight="600.0" fitWidth="710.0" layoutX="-4.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/profile.png" />
+         </image>
+      </ImageView>
       <Text layoutX="91.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rank:" wrappingWidth="132.13671875">
          <font>
             <Font size="17.0" />
@@ -41,6 +41,11 @@
          </font>
       </Text>
       <Text layoutX="156.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" wrappingWidth="106.13671875">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="91.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" wrappingWidth="106.13671875">
          <font>
             <Font size="17.0" />
          </font>

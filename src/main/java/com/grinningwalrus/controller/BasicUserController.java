@@ -26,9 +26,9 @@ public class BasicUserController
         logged_user.setUsername(username);
     }
 
-    public static void message_box(String text)
+    public static void message_box(String text, Alert.AlertType type)
     {
-        Alert alert = new Alert(Alert.AlertType.WARNING);
+        Alert alert = new Alert(type);
         alert.setTitle("Mountain App Message");
         alert.setContentText(text);
         alert.showAndWait();
