@@ -1,3 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <java version="1.8.0_241" class="java.beans.XMLDecoder">
+ <object class="com.grinningwalrus.baseclasses.Record">
+  <void property="altitude">
+   <string>436</string>
+  </void>
+  <void property="location">
+   <string>bej</string>
+  </void>
+  <void property="name">
+   <string>razvan</string>
+  </void>
+ </object>
+ <object class="com.grinningwalrus.baseclasses.Record">
+  <void property="altitude">
+   <string>436</string>
+  </void>
+  <void property="location">
+   <string>bej</string>
+  </void>
+  <void property="name">
+   <string>razvan</string>
+  </void>
+ </object>
+ <object class="com.grinningwalrus.baseclasses.Record">
+  <void property="altitude">
+   <string>436</string>
+  </void>
+  <void property="location">
+   <string>bej</string>
+  </void>
+  <void property="name">
+   <string>razvan</string>
+  </void>
+ </object>
 </java>
