@@ -5,6 +5,7 @@ public class User implements Comparable{
     private String name;
     private String password;
     private String rank;
+    private String hiker_rank;
     private Integer score;
 
     public User()
@@ -16,6 +17,7 @@ public class User implements Comparable{
         this.name = name;
         this.password = password;
         this.rank = rank;
+        this.hiker_rank = "Amateur";
         this.score = 0;
     }
 
@@ -57,6 +59,14 @@ public class User implements Comparable{
 
     public void setRank(String rank) {
         this.rank = rank;
+    }
+
+    public String getHiker_rank() {
+        return hiker_rank;
+    }
+
+    public void setHiker_rank(String hiker_rank) {
+        this.hiker_rank = hiker_rank;
     }
 
     @Override
