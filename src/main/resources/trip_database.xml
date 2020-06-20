@@ -2,24 +2,35 @@
 <java version="1.8.0_241" class="java.beans.XMLDecoder">
  <object class="com.grinningwalrus.baseclasses.Trip">
   <void property="date">
-   <string>14/5/1234</string>
+   <string>12/4/2021</string>
   </void>
   <void property="location">
-   <string>retezat</string>
+   <string>Retezat</string>
   </void>
   <void property="name">
-   <string>cooltrip</string>
+   <string>Cool trip</string>
   </void>
  </object>
  <object class="com.grinningwalrus.baseclasses.Trip">
   <void property="date">
-   <string>14/5/1234</string>
+   <string>04/3/2021</string>
   </void>
   <void property="location">
-   <string>retezat</string>
+   <string>Parang</string>
   </void>
   <void property="name">
-   <string>cooltrip</string>
+   <string>Fun trip</string>
+  </void>
+ </object>
+ <object class="com.grinningwalrus.baseclasses.Trip">
+  <void property="date">
+   <string>24/5/2021</string>
+  </void>
+  <void property="location">
+   <string>Bucegi</string>
+  </void>
+  <void property="name">
+   <string>Funnier trip</string>
   </void>
  </object>
 </java>

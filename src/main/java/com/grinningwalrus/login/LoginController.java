@@ -1,6 +1,7 @@
 package com.grinningwalrus.login;
 
 import com.grinningwalrus.controller.BasicUserController;
+import javafx.scene.control.Alert;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -82,12 +83,12 @@ public class LoginController implements java.io.Serializable{
                     return u.getRank();
                 }
                 else {
-                    BasicUserController.message_box("Invalid password!");
+                    BasicUserController.message_box("Invalid password!", Alert.AlertType.ERROR);
                     return "error";
                 }
             }
         }
-        BasicUserController.message_box("Username does not exist!");
+        BasicUserController.message_box("Username does not exist!", Alert.AlertType.ERROR);
         return "error";
     }
 
