@@ -68,38 +68,4 @@
    <int>0</int>
   </void>
  </object>
- <object class="com.grinningwalrus.login.User">
-  <void property="hiker_rank">
-   <string>Amateur</string>
-  </void>
-  <void property="name">
-   <string>razvan1</string>
-  </void>
-  <void property="password">
-   <string>ncsopvb</string>
-  </void>
-  <void property="rank">
-   <string>hiker</string>
-  </void>
-  <void property="score">
-   <int>0</int>
-  </void>
- </object>
- <object class="com.grinningwalrus.login.User">
-  <void property="hiker_rank">
-   <string>Amateur</string>
-  </void>
-  <void property="name">
-   <string>new_user</string>
-  </void>
-  <void property="password">
-   <string>qctu</string>
-  </void>
-  <void property="rank">
-   <string>hiker</string>
-  </void>
-  <void property="score">
-   <int>1</int>
-  </void>
- </object>
 </java>

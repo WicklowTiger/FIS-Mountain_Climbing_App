@@ -19,8 +19,10 @@ public class RecordXMLController implements Serializable{
 
     public static void initialize(ObservableList<Record> list)
     {
+        records = new ArrayList<Record>();
         try {
             File IN_FILE = new File("classes/record_database.xml");
+//            File IN_FILE = new File("src/main/resources/record_database.xml");
             FileInputStream fis = new FileInputStream(IN_FILE);
             XMLDecoder decoder = new XMLDecoder(new BufferedInputStream(fis));
             boolean reached_end_of_file = false;
@@ -49,6 +51,7 @@ public class RecordXMLController implements Serializable{
         try
         {
             File OUT_FILE = new File("classes/record_database.xml");
+//            File OUT_FILE = new File("src/main/resources/record_database.xml");
             FileOutputStream fos = new FileOutputStream(OUT_FILE);
             XMLEncoder encoder = new XMLEncoder(new BufferedOutputStream(fos));
             for(Record t:records)

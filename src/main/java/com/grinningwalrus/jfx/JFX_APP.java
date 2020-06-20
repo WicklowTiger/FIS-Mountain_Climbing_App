@@ -88,7 +88,8 @@ public class JFX_APP extends Application {
     @FXML
     void register(ActionEvent event)
     {
-        controller.register(user_field.getText(), pass_field.getText());
+        if(controller.register(user_field.getText(), pass_field.getText()).equalsIgnoreCase("exists"))
+            BasicUserController.message_box("Username already exists");
     }
 
     @FXML

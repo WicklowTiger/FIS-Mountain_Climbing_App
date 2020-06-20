@@ -20,6 +20,7 @@ public class LoginController implements java.io.Serializable{
     private void initialize()
     {
         try {
+//            File IN_FILE = new File("src/main/resources/database.xml");
             File IN_FILE = new File("classes/database.xml");
             FileInputStream fis = new FileInputStream(IN_FILE);
             XMLDecoder decoder = new XMLDecoder(new BufferedInputStream(fis));
@@ -51,6 +52,7 @@ public class LoginController implements java.io.Serializable{
     {
         try
         {
+//            File OUT_FILE = new File("src/main/resources/database.xml");
             File OUT_FILE = new File("classes/database.xml");
             FileOutputStream fos = new FileOutputStream(OUT_FILE);
             XMLEncoder encoder = new XMLEncoder(new BufferedOutputStream(fos));
@@ -89,17 +91,17 @@ public class LoginController implements java.io.Serializable{
         return "error";
     }
 
-    public void register(String username, String pass)
+    public String register(String username, String pass)
     {
         for(User u:users)
         {
             if(u.getName().equalsIgnoreCase(username)) {
-                BasicUserController.message_box("That username already exists!");
-                return;
+                return "exists";
             }
         }
         users.add(new User(username, Encryption.encrypt_password(pass), "hiker"));
         updateXML();
+        return "registered";
     }
 
     public ArrayList<User> getUsers()
