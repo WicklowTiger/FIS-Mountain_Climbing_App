@@ -17,7 +17,7 @@
                   <Image url="@images/red_color.jpg" />
                </image>
             </ImageView>
-            <Button layoutX="27.0" layoutY="275.0" mnemonicParsing="false" onAction="#previous_image" prefHeight="80.0" prefWidth="100.0">
+            <Button layoutX="27.0" layoutY="275.0" mnemonicParsing="false" onAction="#previous_guide" prefHeight="80.0" prefWidth="100.0">
                <graphic>
                   <ImageView fitHeight="80.0" fitWidth="91.0">
                      <image>
@@ -26,7 +26,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="570.0" layoutY="275.0" mnemonicParsing="false" onAction="#next_image" prefHeight="80.0" prefWidth="100.0">
+            <Button layoutX="570.0" layoutY="275.0" mnemonicParsing="false" onAction="#next_guide" prefHeight="80.0" prefWidth="100.0">
                <graphic>
                   <ImageView fitHeight="80.0" fitWidth="91.0">
                      <image>
@@ -35,13 +35,13 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Text fill="#bdb2b2" layoutX="278.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gallery" wrappingWidth="143.09185791015625">
+            <Text fill="#bdb2b2" layoutX="278.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Guides" wrappingWidth="143.09185791015625">
                <font>
                   <Font name="Sylfaen" size="41.0" />
                </font>
             </Text>
             <ImageView id="gallery_image" fx:id="gallery_image" fitHeight="332.0" fitWidth="385.0" layoutX="158.0" layoutY="211.0" pickOnBounds="true" preserveRatio="true">
-               <Image url="@images/gallery_1.png" />
+               <Image url="@images/guide_1.png" />
             </ImageView>
             <ImageView fitHeight="56.0" fitWidth="96.0" layoutX="37.0" layoutY="522.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -49,9 +49,9 @@
                </image>
             </ImageView>
             <Button layoutX="27.0" layoutY="522.0" mnemonicParsing="false" onAction="#back_button" opacity="0.0" prefHeight="56.0" prefWidth="99.0" text="Back_gallery" />
-            <Button layoutX="210.0" layoutY="522.0" onAction="#submit_photo" mnemonicParsing="false" prefHeight="42.0" prefWidth="99.0" text="Submit photo" />
+            <Button layoutX="210.0" layoutY="522.0" onAction="#submit_guide" mnemonicParsing="false" prefHeight="42.0" prefWidth="99.0" text="Submit guide" />
             <TextField layoutX="331.0" layoutY="536.0" prefHeight="28.0" prefWidth="125.0" />
-            <Text fill="WHITE" layoutX="331.0" layoutY="528.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Photo name" wrappingWidth="106.99998736381531">
+            <Text fill="WHITE" layoutX="331.0" layoutY="528.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Guide name" wrappingWidth="106.99998736381531">
                <font>
                   <Font size="15.0" />
                </font>
