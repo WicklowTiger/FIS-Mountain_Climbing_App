@@ -6,4 +6,9 @@ public class Hiker extends ApplicationUser
     {
         System.out.println("Hi, I am a hiker!");
     }
+
+    public String getRank()
+    {
+        return "hiker";
+    }
 }

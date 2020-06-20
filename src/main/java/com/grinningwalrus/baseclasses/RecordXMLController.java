@@ -1,28 +1,26 @@
 package com.grinningwalrus.baseclasses;
 
-import com.grinningwalrus.controller.BasicUserController;
 import javafx.collections.ObservableList;
 
-import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
+import java.io.*;
+import java.util.ArrayList;
 
-public class TripXMLController implements java.io.Serializable{
+public class RecordXMLController implements Serializable{
 
 
-    private static ArrayList<Trip> trips = new ArrayList<Trip>();
+    private static ArrayList<Record> records = new ArrayList<Record>();
 
-    public TripXMLController()
+    public RecordXMLController()
     {
 
     }
 
-    public static void initialize(ObservableList<Trip> list)
+    public static void initialize(ObservableList<Record> list)
     {
         try {
-            File IN_FILE = new File("src/main/resources/trip_database.xml");
+            File IN_FILE = new File("classes/record_database.xml");
             FileInputStream fis = new FileInputStream(IN_FILE);
             XMLDecoder decoder = new XMLDecoder(new BufferedInputStream(fis));
             boolean reached_end_of_file = false;
@@ -30,9 +28,9 @@ public class TripXMLController implements java.io.Serializable{
             {
                 try
                 {
-                    Object decoded_trip = decoder.readObject();
-                    list.add((Trip)decoded_trip);
-                    trips.add((Trip)decoded_trip);
+                    Object decoded_record = decoder.readObject();
+                    records.add((Record)decoded_record);
+                    list.add((Record)decoded_record);
                 }
                 catch(Exception e)
                 {
@@ -50,10 +48,10 @@ public class TripXMLController implements java.io.Serializable{
     {
         try
         {
-            File OUT_FILE = new File("src/main/resources/trip_database.xml");
+            File OUT_FILE = new File("classes/record_database.xml");
             FileOutputStream fos = new FileOutputStream(OUT_FILE);
             XMLEncoder encoder = new XMLEncoder(new BufferedOutputStream(fos));
-            for(Trip t:trips)
+            for(Record t:records)
             {
                 encoder.writeObject(t);
             }
@@ -67,8 +65,8 @@ public class TripXMLController implements java.io.Serializable{
 
     }
 
-    public static ArrayList<Trip> getTrips() {
-        return trips;
+    public static ArrayList<Record> getRecords() {
+        return records;
     }
 
 }
