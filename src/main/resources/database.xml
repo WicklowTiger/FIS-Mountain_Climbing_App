@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <java version="1.8.0_241" class="java.beans.XMLDecoder">
  <object class="com.grinningwalrus.login.User">
+  <void property="hiker_rank">
+   <string>Experienced</string>
+  </void>
   <void property="name">
    <string>razvan</string>
   </void>
@@ -11,10 +14,13 @@
    <string>hiker</string>
   </void>
   <void property="score">
-   <int>2</int>
+   <int>6</int>
   </void>
  </object>
  <object class="com.grinningwalrus.login.User">
+  <void property="hiker_rank">
+   <string>Amateur</string>
+  </void>
   <void property="name">
    <string>dani</string>
   </void>
@@ -22,13 +28,16 @@
    <string>qcsqmc</string>
   </void>
   <void property="rank">
-   <string>hiker</string>
+   <string>triporganizer</string>
   </void>
   <void property="score">
    <int>4</int>
   </void>
  </object>
  <object class="com.grinningwalrus.login.User">
+  <void property="hiker_rank">
+   <string>Amateur</string>
+  </void>
   <void property="name">
    <string>cosmin</string>
   </void>
@@ -36,10 +45,27 @@
    <string>qcsqmc244</string>
   </void>
   <void property="rank">
+   <string>admin</string>
+  </void>
+  <void property="score">
+   <int>4</int>
+  </void>
+ </object>
+ <object class="com.grinningwalrus.login.User">
+  <void property="hiker_rank">
+   <string>Amateur</string>
+  </void>
+  <void property="name">
+   <string>aleku</string>
+  </void>
+  <void property="password">
+   <string>244</string>
+  </void>
+  <void property="rank">
    <string>hiker</string>
   </void>
   <void property="score">
-   <int>1</int>
+   <int>0</int>
   </void>
  </object>
 </java>
