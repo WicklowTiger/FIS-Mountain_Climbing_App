@@ -10,4 +10,6 @@ public abstract class ApplicationUser {
     public void setUsername(String username) {
         this.username = username;
     }
+
+    public abstract String getRank();
 }

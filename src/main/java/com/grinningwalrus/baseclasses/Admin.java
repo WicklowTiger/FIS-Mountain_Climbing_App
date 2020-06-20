@@ -11,4 +11,9 @@ public class Admin extends ApplicationUser
     {
         System.out.println("hello");
     }
+
+    public String getRank()
+    {
+        return "admin";
+    }
 }
