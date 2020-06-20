@@ -22,7 +22,7 @@ public class TripXMLController implements java.io.Serializable{
     public static void initialize(ObservableList<Trip> list)
     {
         try {
-            File IN_FILE = new File("classes/trip_database.xml");
+            File IN_FILE = new File("src/main/resources/trip_database.xml");
             FileInputStream fis = new FileInputStream(IN_FILE);
             XMLDecoder decoder = new XMLDecoder(new BufferedInputStream(fis));
             boolean reached_end_of_file = false;
@@ -50,7 +50,7 @@ public class TripXMLController implements java.io.Serializable{
     {
         try
         {
-            File OUT_FILE = new File("classes/trip_database.xml");
+            File OUT_FILE = new File("src/main/resources/trip_database.xml");
             FileOutputStream fos = new FileOutputStream(OUT_FILE);
             XMLEncoder encoder = new XMLEncoder(new BufferedOutputStream(fos));
             for(Trip t:trips)

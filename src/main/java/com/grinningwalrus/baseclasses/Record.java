@@ -14,11 +14,12 @@ public class Trip {
 
     }
 
-    public Trip(String name, String location, String date)
+    public Trip(String name, String location, String date, ArrayList<String> signed_up_users)
     {
         this.name = name;
         this.location = location;
         this.date = date;
+        this.signed_up_users = signed_up_users;
     }
 
     public String getName() {
